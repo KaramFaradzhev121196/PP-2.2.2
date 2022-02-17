@@ -8,7 +8,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class CarService {
+public class CarServiceImpl implements Carservice {
+
     private List<Car> cars;
 
     {
@@ -21,6 +22,7 @@ public class CarService {
         cars.add(new Car("Audi", "white", 190));
     }
 
+    @Override
     public List<Car> carCount(int count) {
         if (count >= 5) {
             return cars;
